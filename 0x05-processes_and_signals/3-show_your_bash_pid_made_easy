@@ -2,10 +2,4 @@
 # Bash script that displays its own PID.
 # shellcheck disable=SC2009
 
-pids=$( pgrep -a bash )
-
-for pid in $pids
-do
-	pname=$( cat /proc/$pid/cmdline )
-	echo "$pid $pname"
-done
+pgrep -l bash
