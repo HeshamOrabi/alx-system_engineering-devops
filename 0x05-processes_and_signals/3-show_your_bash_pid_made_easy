@@ -7,5 +7,5 @@ pids=$( pgrep -a bash )
 for pid in $pids
 do
 	pname=$( cat /proc/$pid/cmdline )
-	echo "$pids $pname"
+	echo "$pid $pname"
 done
